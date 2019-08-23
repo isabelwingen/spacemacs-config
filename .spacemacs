@@ -31,6 +31,9 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     csv
+     vimscript
+     clojure
      markdown
      helm
      auto-completion
@@ -45,7 +48,6 @@ values."
              shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     clojure
      version-control
      latex
      )
@@ -58,7 +60,7 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(org-projectile)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -133,7 +135,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -392,3 +394,17 @@ you should place your code here."
 ;; auto-generate custom variable definitions.
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (csv-mode rainbow-mode vimrc-mode dactyl-mode mmt powerline dash-functional org-category-capture alert log4e gntp org-plus-contrib markdown-mode parent-mode projectile request gitignore-mode fringe-helper git-gutter flyspell-correct pos-tip flycheck flx highlight smartparens iedit anzu evil goto-chg undo-tree f dash s company hydra lv eval-sexp-fu seq spinner pkg-info epl bind-map bind-key yasnippet packed auctex helm avy helm-core async auto-complete popup orgit magit-gitflow magit-popup git-timemachine git-gutter-fringe+ git-gutter+ evil-magit magit transient git-commit with-editor clj-refactor inflections edn multiple-cursors paredit peg cider sesman queue parseedn clojure-mode parseclj a xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill typit toc-org sudoku spaceline smeargle shell-pop restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox pacmacs org-projectile org-present org-pomodoro org-mime org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-messenger git-link git-gutter-fringe gh-md fuzzy flyspell-correct-helm flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig ediprolog dumb-jump diminish diff-hl define-word company-statistics company-auctex column-enforce-mode clojure-snippets clean-aindent-mode cider-eval-sexp-fu bracketed-paste auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell 2048-game))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
